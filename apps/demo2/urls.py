@@ -15,12 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from rest_framework.routers import DefaultRouter
-from apps.demo1 import views
+from django.conf.urls import url
+from apps.demo2 import views
 
 urlpatterns = [
+    url(r'^books/$', views.BookListView.as_view()),
+    url(r'^books/(?P<pk>\d+)/$', views.BookDetailView.as_view()),
 ]
-router = DefaultRouter()
-router.register('books', views.BookViewSet, basename='book')
-router.register('heroes', views.HeroViewSet, basename='hero')
-urlpatterns += router.urls

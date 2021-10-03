@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.forms.models import model_to_dict
 from django.views import View
 from django import http
 import json
@@ -20,7 +21,8 @@ class BookListView(View):
                 "bpub_date": book.bpub_date,
                 "bread": book.bread,
                 "bcomment": book.bcomment,
-                "is_delete": book.is_delete
+                "is_delete": book.is_delete,
+                "heros": list(book.heroinfo_set.all().values())  # 外键反向查询，模型类名小写_set .all()表示获取全部
             }
             books_list.append(book_dict)
         # 返回
