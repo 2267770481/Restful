@@ -12,5 +12,5 @@
   POST /demoX/books：新建一条book数据（上传文件）    
   GET /demoX/books/pk：获取某个指定的book数据    
   PUT /demoX/books/pk：更新某个指定的book数据（提供该books的全部信息）    
-  PATCH /demoX/books/pk：更新某个指定的book数据（提供该动物园的部分信息）    
+  PATCH /demoX/books/pk：更新某个指定的book数据（提供该books的部分信息）    
   DELETE /demoX/books/pk：删除某个数据    
