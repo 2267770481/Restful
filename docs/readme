@@ -24,3 +24,4 @@
   PUT /demoX/books/pk：更新某个指定的book数据（提供该books的全部信息）
   PATCH /demoX/books/pk：更新某个指定的book数据（提供该books的部分信息）
   DELETE /demoX/books/pk：删除某个数据
+  GET /docs/: 接口文档

@@ -1,4 +1,5 @@
 #这是一个研究restful的工程。 
+####使用过程中有问题或扩展一定要看docs/下边的DRF资料。
 ##序列化器作用:
     1, 序列化: 将模型类对象, 转成json(dict)数据
     2, 反序列化: 将json(dict)数据, 转成模型类对象
@@ -24,3 +25,4 @@
     PUT /demoX/books/pk：更新某个指定的book数据（提供该books的全部信息）    
     PATCH /demoX/books/pk：更新某个指定的book数据（提供该books的部分信息）    
     DELETE /demoX/books/pk：删除某个数据    
+    GET /docs/: 接口文档

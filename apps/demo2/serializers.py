@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from apps.demo1.models import BookInfo
 
 
 # 自定义校验 需求: 添加的书籍的日期不能小于2015年
@@ -34,3 +35,15 @@ class BookInfoSerializer(serializers.Serializer):
         if attrs["bread"] < attrs["bcomment"]:
             raise serializers.ValidationError("评论量不能大于阅读量")
         return attrs
+
+    def create(self, validated_data):
+        # 数据入库
+        book = BookInfo.objects.create(**validated_data)
+        # 返回
+        return book
+
+    def update(self, instance, validated_data):
+        # 数据更新
+        book = instance.update(**validated_data)
+        # 返回
+        return book
